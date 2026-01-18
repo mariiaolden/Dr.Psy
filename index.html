@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мария Ален | Психолог</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8fa198; 
+            --bg-color: #fdfbf9;
+            --text-dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .hero {
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(to right, #fdfbf9 50%, #e0e6e3 50%);
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 200px 200px 0 0; /* Округлая форма как на макете */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+
+        .services {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-section {
+            padding: 80px 8%;
+            text-align: center;
+            background-color: #e0e6e3;
+        }
+
+        .social-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; background: #fdfbf9; }
+            .hero-text { padding-right: 0; text-align: center; }
+            .hero-text h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Мария Ален</div>
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Запись</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Пространство для души и роста</h1>
+        <p>Меня зовут Мария Ален. Я помогаю людям обрести гармонию, преодолеть кризисы и научиться слышать свои истинные потребности.</p>
+        <a href="#contact" class="btn">Начать работу</a>
+    </div>
+    <div class="hero-img">
+        <img src="photo.jpg" alt="Психолог Мария Ален">
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Направления работы</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Самопознание</h3>
+            <p>Работа с самооценкой и личными границами.</p>
+        </div>
+        <div class="card">
+            <h3>Кризисные этапы</h3>
+            <p>Поддержка при выгорании и жизненных переменах.</p>
+        </div>
+        <div class="card">
+            <h3>Эмоции</h3>
+            <p>Бережная работа с тревогой и страхами.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <h2>Записаться на консультацию</h2>
+    <div style="margin-top: 30px;">
+        <a href="https://wa.me/ВАШ_НОМЕР" class="social-btn" style="background: #25D366;">WhatsApp</a>
+        <a href="https://t.me/ВАШ_НИК" class="social-btn" style="background: #0088cc;">Telegram</a>
+    </div>
+    <p style="margin-top: 20px;">Принимаю онлайн по всему миру и очно в г. Москва</p>
+</section>
+
+<footer>
+    &copy; 2026 Психолог Мария Ален. Этика. Профессионализм. Конфиденциальность.
+</footer>
+
+</body>
+</html>
