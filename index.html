@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мария Ален | Психолог и Исследователь</title>
+    <title>Мария Ален | Therapeut & Onderzoeker</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --primary-color: #8fa198; --bg-color: #fdfbf9; --text-dark: #2c3e50; --white: #ffffff; }
@@ -11,40 +11,44 @@
         
         header { background: var(--white); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1000; }
         .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--primary-color); text-decoration: none; font-weight: 700; }
-        nav a { margin-left: 25px; text-decoration: none; color: var(--text-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
         
-        section { padding: 60px 8%; max-width: 1200px; margin: 0 auto; }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.3rem; text-align: center; margin-bottom: 30px; color: #1a252f; }
+        nav { display: flex; align-items: center; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--text-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .lang-switch { margin-left: 30px; border-left: 1px solid #ddd; padding-left: 20px; }
+        .lang-btn { background: none; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 600; color: #ccc; transition: 0.3s; padding: 5px; }
+        .lang-btn.active { color: var(--primary-color); }
 
-        .hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-top: 40px; }
+        section { padding: 60px 8%; max-width: 1200px; margin: 0 auto; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.3rem; text-align: center; margin-bottom: 30px; }
+
+        .hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
         .hero-text { flex: 1; }
-        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
         .hero-img { flex: 1; text-align: right; }
         .hero-img img { width: 100%; max-width: 380px; border-radius: 200px 200px 0 0; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         
-        /* Раздел Образование */
-        .edu-section { background: var(--white); border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
-        .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
-        .edu-item h3, .achieve-item h3 { font-size: 1.1rem; color: var(--primary-color); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .edu-list, .achieve-list { list-style: none; padding: 0; }
-        .edu-list li, .achieve-list li { margin-bottom: 15px; position: relative; padding-left: 20px; font-size: 0.95rem; }
-        .edu-list li::before, .achieve-list li::before { content: "•"; color: var(--primary-color); position: absolute; left: 0; font-weight: bold; }
+        .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: white; padding: 40px; border-radius: 20px; }
+        .edu-item h3 { font-size: 1.1rem; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; padding-left: 20px; position: relative; font-size: 0.95rem; }
+        li::before { content: "•"; color: var(--primary-color); position: absolute; left: 0; }
 
-        .services { text-align: center; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { padding: 35px; background: var(--white); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color); }
+        .card { padding: 35px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color); text-align: center; }
 
         .blog { background: #f4f6f5; max-width: 100%; }
         .article { background: var(--white); padding: 40px; border-radius: 15px; max-width: 800px; margin: 0 auto; }
-        
+
         .contact-section { text-align: center; background-color: #e0e6e3; padding: 80px 8%; max-width: 100%; }
         .social-btn { display: inline-block; margin: 10px; padding: 15px 35px; border-radius: 8px; color: white; text-decoration: none; font-weight: 600; }
+
         footer { padding: 40px; text-align: center; color: #888; font-size: 0.85rem; }
 
         @media (max-width: 850px) {
             .hero { flex-direction: column; text-align: center; }
             .edu-grid { grid-template-columns: 1fr; }
-            nav { display: none; }
+            nav a { display: none; }
         }
     </style>
 </head>
@@ -53,87 +57,90 @@
 <header>
     <a href="#" class="logo">Мария Ален</a>
     <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#education">Опыт</a>
-        <a href="#services">Услуги</a>
-        <a href="#blog">Блог</a>
-        <a href="#contact">Запись</a>
+        <a href="#about" class="tr" data-ru="Обо мне" data-nl="Over mij">Обо мне</a>
+        <a href="#education" class="tr" data-ru="Опыт" data-nl="Ervaring">Опыт</a>
+        <a href="#services" class="tr" data-ru="Услуги" data-nl="Diensten">Услуги</a>
+        <a href="#blog" class="tr" data-ru="Блог" data-nl="Blog">Блог</a>
+        <a href="#contact" class="tr" data-ru="Запись" data-nl="Contact">Запись</a>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('ru', event)">RU</button>
+            <button class="lang-btn" onclick="setLang('nl', event)">NL</button>
+        </div>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-text">
-        <h1>Бережная помощь и научный подход</h1>
-        <p>Меня зовут Мария Ален. Я сочетаю психологическую практику с глубоким анализом гуманитарных процессов, помогая вам обрести устойчивость.</p>
-        <a href="#contact" class="btn" style="display:inline-block; padding: 15px 35px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Записаться</a>
+        <h1 class="tr" data-ru="Бережная помощь и научный подход" data-nl="Zorgvuldige hulp en wetenschappelijke benadering">Бережная помощь и научный подход</h1>
+        <p class="tr" data-ru="Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии и лингвистике." 
+           data-nl="Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.">
+           Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии и лингвистике.
+        </p>
+        <a href="#contact" class="btn tr" data-ru="Записаться" data-nl="Afspraak maken" style="display:inline-block; padding: 15px 35px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Записаться</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Мария Ален">
+        <img src="photo.jpg" alt="Mariia Alen">
     </div>
 </section>
 
-<section class="edu-section" id="education">
-    <h2>Образование и достижения</h2>
+<section id="education">
+    <h2 class="tr" data-ru="Образование и достижения" data-nl="Opleiding en Prestaties">Образование и достижения</h2>
     <div class="edu-grid">
-        <div class="edu-item">
-            <h3>Профессиональное образование</h3>
-            <ul class="edu-list">
-                <li><strong>2008 — ПГПУ:</strong> Психолог, преподаватель психологии.</li>
-                <li><strong>2011 — ПГТУ:</strong> Лингвист-переводчик.</li>
-                <li><strong>2023 — ПГУ:</strong> Магистр филологии.</li>
+        <div>
+            <h3 class="tr" data-ru="Образование" data-nl="Opleiding">Образование</h3>
+            <ul>
+                <li><strong>2008 — PSPU:</strong> <span class="tr" data-ru="Психолог, преподаватель психологии" data-nl="Psycholoog, docent psychologie">Психолог, преподаватель психологии</span></li>
+                <li><strong>2011 — PSTU:</strong> <span class="tr" data-ru="Лингвист-переводчик" data-nl="Linguïst-vertaler">Лингвист-переводчик</span></li>
+                <li><strong>2023 — PSU:</strong> <span class="tr" data-ru="Магистр филологии" data-nl="Master in de Filologie">Магистр филологии</span></li>
             </ul>
         </div>
-        <div class="achieve-item">
-            <h3>Научные победы</h3>
-            <ul class="achieve-list">
-                <li><strong>2021 — 1 место:</strong> Международные соревнования. Статья «Образ врага в масс-медиа Бельгии».</li>
-                <li><strong>2022 — 3 место:</strong> Международные соревнования. Статья «Миграция: мультилингвизм или создание альтернативного гнезда».</li>
+        <div>
+            <h3 class="tr" data-ru="Научные победы" data-nl="Wetenschappelijke prestaties">Научные победы</h3>
+            <ul>
+                <li class="tr" data-ru="2021 — 1 место. Статья «Образ врага в масс-медиа Бельгии»" data-nl="2021 — 1ste plaats. Artikel 'Het vijandbeeld in de Belgische massamedia'">2021 — 1 место. Статья «Образ врага в масс-медиа Бельгии»</li>
+                <li class="tr" data-ru="2022 — 3 место. Статья «Миграция: создание альтернативного гнезда»" data-nl="2022 — 3de plaats. Artikel 'Migratie: het creëren van een alternatief nest'">2022 — 3 место. Статья «Миграция: создание альтернативного гнезда»</li>
             </ul>
-        </div>
-    </div>
-</section>
-
-<section class="services" id="services">
-    <h2>С чем я работаю</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Личные кризисы</h3>
-            <p>Поиск смыслов, работа с самооценкой и преодоление трудных жизненных этапов.</p>
-        </div>
-        <div class="card">
-            <h3>Язык и адаптация</h3>
-            <p>Психологическая поддержка при миграции и поиске «своего гнезда» в новой культуре.</p>
-        </div>
-        <div class="card">
-            <h3>Эмоции</h3>
-            <p>Работа с тревогой, страхами и восстановление эмоционального баланса.</p>
         </div>
     </div>
 </section>
 
 <section class="blog" id="blog">
-    <h2>Блог</h2>
+    <h2 class="tr" data-ru="Блог" data-nl="Blog">Блог</h2>
     <div class="article">
-        <h3>Первый шаг: что происходит на первой встрече?</h3>
-        <p>Многие откладывают визит к психологу из-за страха неизвестности. Первая сессия — это диагностика вашего состояния и формулирование целей. Вам не нужно «готовиться», просто будьте собой.</p>
+        <h3 class="tr" data-ru="Первый шаг: что происходит на первой встрече?" data-nl="De eerste stap: wat gebeurt er tijdens de eerste sessie?">Первый шаг: что происходит на первой встрече?</h3>
+        <p class="tr" 
+           data-ru="Первая сессия — это диагностика вашего состояния и формулирование целей. Мы познакомимся, обсудим ваш запрос и наметим план работы в безопасной атмосфере." 
+           data-nl="De eerste sessie is een intakegesprek om uw situatie te begrijpen en doelen te formuleren. In een veilige sfeer maken we kennis en bespreken we uw hulpvraag.">
+           Первая сессия — это диагностика вашего состояния и формулирование целей. Мы познакомимся, обсудим ваш запрос и наметим план работы в безопасной атмосфере.
+        </p>
     </div>
 </section>
 
 <section class="contact-section" id="contact">
-    <h2>Записаться на консультацию</h2>
-    <p>Выберите удобный мессенджер, чтобы договориться о времени первой встречи.</p>
-    <div style="margin-top: 30px;">
+    <h2 class="tr" data-ru="Записаться" data-nl="Contact opnemen">Записаться</h2>
+    <div style="margin-top: 20px;">
         <a href="https://wa.me/79223624213" class="social-btn" style="background: #25D366;" target="_blank">WhatsApp</a>
-        
         <a href="https://t.me/mari_mis" class="social-btn" style="background: #0088cc;" target="_blank">Telegram</a>
     </div>
-    <p style="margin-top: 20px;">Принимаю онлайн по всему миру и очно в Бельгии г. Вестерло</p>
 </section>
 
+<script>
+    function setLang(lang, event) {
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        if(event) event.target.classList.add('active');
+
+        document.querySelectorAll('.tr').forEach(el => {
+            const text = el.getAttribute('data-' + lang);
+            if(text) el.innerText = text;
+        });
+        document.documentElement.lang = lang;
+    }
+</script>
+
 <footer>
-    &copy; 2026 Психолог Мария Ален. <br>
-    Личная терапия онлайн и очно.
+    &copy; 2025 Mariia Alen. Psychologishe begeleiding & Therapie.
 </footer>
 
 </body>
 </html>
+
