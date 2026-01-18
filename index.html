@@ -1,167 +1,156 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Alen | Psycholoog & Onderzoeker</title>
+    <title>Mariia Alen | Psycholoog & Onderzoeker</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --primary-color: #8fa198; --bg-color: #fdfbf9; --text-dark: #2c3e50; --white: #ffffff; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
-        
         header { background: var(--white); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1000; }
         .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary-color); text-decoration: none; font-weight: 700; }
-        
         nav { display: flex; align-items: center; }
         nav a { margin-left: 20px; text-decoration: none; color: var(--text-dark); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-        
         .lang-switch { margin-left: 25px; border-left: 1px solid #ddd; padding-left: 15px; }
         .lang-btn { background: none; border: none; cursor: pointer; font-weight: 600; color: #ccc; transition: 0.3s; padding: 5px; }
         .lang-btn.active { color: var(--primary-color); }
-
         section { padding: 80px 8%; max-width: 1100px; margin: 0 auto; }
         h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; text-align: center; margin-bottom: 40px; }
-
         .hero { display: flex; align-items: center; gap: 40px; }
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
         .hero-img { flex: 0.8; text-align: right; }
         .hero-img img { width: 100%; max-width: 350px; border-radius: 175px 175px 0 0; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        
         .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
         .edu-item h3 { font-size: 1rem; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
         ul { list-style: none; padding: 0; }
         li { margin-bottom: 12px; padding-left: 20px; position: relative; font-size: 0.9rem; }
         li::before { content: "•"; color: var(--primary-color); position: absolute; left: 0; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { padding: 35px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 4px solid var(--primary-color); }
-
-        .price-card { padding: 30px; background: white; border-radius: 15px; text-align: center; border: 1px solid #eee; transition: 0.3s; }
+        .card, .price-card { padding: 35px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 4px solid var(--primary-color); }
+        .price-card { text-align: center; border: 1px solid #eee; }
         .price-value { font-size: 1.8rem; font-family: 'Playfair Display', serif; color: var(--primary-color); margin: 10px 0; }
-
         .blog-box { background: #f4f6f5; padding: 60px 8%; }
         .article { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-
         .contact-section { text-align: center; background-color: #e0e6e3; padding: 80px 8%; }
         .social-btn { display: inline-block; margin: 10px; padding: 18px 40px; border-radius: 8px; color: white; text-decoration: none; font-weight: 600; min-width: 200px; transition: 0.3s; }
-        .social-btn:hover { opacity: 0.9; transform: translateY(-2px); }
-
         footer { padding: 40px; text-align: center; color: #888; font-size: 0.85rem; background: var(--white); border-top: 1px solid #eee; }
-
-        @media (max-width: 850px) {
-            .hero { flex-direction: column; text-align: center; }
-            .hero-img { order: -1; }
-            .edu-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-        }
+        @media (max-width: 850px) { .hero, .edu-grid { grid-template-columns: 1fr; text-align: center; } .hero-img { order: -1; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="#" class="logo tr" data-ru="Мария Ален" data-nl="Maria Alen">Мария Ален</a>
+    <a href="#" class="logo tr" data-ru="Мария Ален" data-nl="Mariia Alen">Mariia Alen</a>
     <nav>
         <div class="nav-links">
-            <a href="#about" class="tr" data-ru="Обо мне" data-nl="Over mij">Обо мне</a>
-            <a href="#education" class="tr" data-ru="Опыт" data-nl="Ervaring">Опыт</a>
-            <a href="#services" class="tr" data-ru="Услуги" data-nl="Diensten">Услуги</a>
-            <a href="#blog" class="tr" data-ru="Блог" data-nl="Blog">Блог</a>
-            <a href="#contact" class="tr" data-ru="Запись" data-nl="Contact">Запись</a>
+            <a href="#about" class="tr" data-ru="Обо мне" data-nl="Over mij">Over mij</a>
+            <a href="#education" class="tr" data-ru="Опыт" data-nl="Ervaring">Ervaring</a>
+            <a href="#services" class="tr" data-ru="Услуги" data-nl="Diensten">Diensten</a>
+            <a href="#blog" class="tr" data-ru="Блог" data-nl="Blog">Blog</a>
+            <a href="#contact" class="tr" data-ru="Запись" data-nl="Contact">Contact</a>
         </div>
         <div class="lang-switch">
-            <button class="lang-btn active" onclick="setLang('ru', event)">RU</button>
-            <button class="lang-btn" onclick="setLang('nl', event)">NL</button>
+            <button class="lang-btn" onclick="setLang('ru', event)">RU</button>
+            <button class="lang-btn active" onclick="setLang('nl', event)">NL</button>
         </div>
     </nav>
 </header>
 
 <section class="hero" id="about">
     <div class="hero-text">
-        <h1 class="tr" data-ru="Бережная помощь и научный подход" data-nl="Zorgvuldige hulp en wetenschappelijke benadering">Бережная помощь и научный подход</h1>
+        <h1 class="tr" data-ru="Бережная помощь и научный подход" data-nl="Zorgvuldige hulp en wetenschappelijke benadering">Zorgvuldige hulp en wetenschappelijke benadering</h1>
         <p class="tr" 
            data-ru="Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии и лингвистике." 
-           data-nl="Mijn naam is Maria Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.">
-           Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии и лингвистике.
+           data-nl="Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.">
+           Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.
         </p>
-        <a href="#contact" class="tr" data-ru="Записаться" data-nl="Afspraak maken" style="display:inline-block; padding: 15px 40px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 20px;">Записаться</a>
+        <a href="#contact" class="tr" data-ru="Записаться" data-nl="Afspraak maken" style="display:inline-block; padding: 15px 40px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 20px;">Afspraak maken</a>
     </div>
     <div class="hero-img">
-        <img src="photo.jpg" alt="Maria Alen">
+        <img src="photo.jpg" alt="Mariia Alen">
     </div>
 </section>
 
 <section id="education">
-    <h2 class="tr" data-ru="Образование и достижения" data-nl="Opleiding en Prestaties">Образование и достижения</h2>
+    <h2 class="tr" data-ru="Образование и достижения" data-nl="Opleiding en Prestaties">Opleiding en Prestaties</h2>
     <div class="edu-grid">
         <div>
-            <h3 class="tr" data-ru="Дипломы" data-nl="Diploma's">Дипломы</h3>
+            <h3 class="tr" data-ru="Дипломы" data-nl="Diploma's">Diploma's</h3>
             <ul>
-                <li><strong>2008 — PSPU:</strong> <span class="tr" data-ru="Психолог, преподаватель психологии" data-nl="Psycholoog, docent psychologie">Психолог, преподаватель психологии</span></li>
-                <li><strong>2011 — PSTU:</strong> <span class="tr" data-ru="Лингвист-переводчик" data-nl="Linguïst-vertaler">Лингвист-переводчик</span></li>
-                <li><strong>2023 — PSU:</strong> <span class="tr" data-ru="Магистр филологии" data-nl="Master in de Filologie">Магистр филологии</span></li>
+                <li><strong>2008 — PSPU:</strong> <span class="tr" data-ru="Психолог, преподаватель психологии" data-nl="Psycholoog, docent psychologie">Psycholoog, docent psychologie</span></li>
+                <li><strong>2011 — PSTU:</strong> <span class="tr" data-ru="Лингвист-переводчик" data-nl="Linguïst-vertaler">Linguïst-vertaler</span></li>
+                <li><strong>2023 — PSU:</strong> <span class="tr" data-ru="Магистр филологии" data-nl="Master in de Filologie">Master in de Filologie</span></li>
             </ul>
         </div>
         <div>
-            <h3 class="tr" data-ru="Научные победы" data-nl="Awards">Научные победы</h3>
+            <h3 class="tr" data-ru="Научные победы" data-nl="Awards">Awards</h3>
             <ul>
-                <li class="tr" data-ru="2021 — 1 место. 'Образ врага в масс-медиа Бельгии'" data-nl="2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'">2021 — 1 место. 'Образ врага в масс-медиа Бельгии'</li>
-                <li class="tr" data-ru="2022 — 3 место. 'Миграция: создание альтернативного гнезда'" data-nl="2022 — 3de plaats. 'Migratie: het creëren van een alternatief nest'">2022 — 3 место. 'Миграция: создание альтернативного гнезда'</li>
+                <li class="tr" data-ru="2021 — 1 место. 'Образ врага в масс-медиа Бельгии'" data-nl="2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'">2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'</li>
+                <li class="tr" data-ru="2022 — 3 место. 'Миграция: создание альтернативного гнезда'" data-nl="2022 — 3de plaats. 'Migratie: het creëren van een alternatief nest'">2022 — 3de plaats. 'Migratie: het creëren van een alternatief nest'</li>
             </ul>
         </div>
     </div>
 </section>
 
 <section id="services">
-    <h2 class="tr" data-ru="Направления работы" data-nl="Werkgebieden">Направления работы</h2>
+    <h2 class="tr" data-ru="Направления работы" data-nl="Werkgebieden">Werkgebieden</h2>
     <div class="grid">
         <div class="card">
-            <h3 class="tr" data-ru="Индивидуальная терапия" data-nl="Individuele therapie">Индивидуальная терапия</h3>
-            <p class="tr" data-ru="Работа с тревогой, самооценкой и личными кризисами." data-nl="Werken aan angst, zelfbeeld en persoonlijke crises.">Работа с тревогой, самооценкой и личными кризисами.</p>
+            <h3 class="tr" data-ru="Индивидуальная терапия" data-nl="Individuele therapie">Individuele therapie</h3>
+            <p class="tr" data-ru="Работа с тревогой, самооценкой и личными кризисами." data-nl="Werken aan angst, zelfbeeld en persoonlijke crises.">Werken aan angst, zelfbeeld en persoonlijke crises.</p>
         </div>
         <div class="card">
-            <h3 class="tr" data-ru="Психология миграции" data-nl="Migratiepsychologie">Психология миграции</h3>
-            <p class="tr" data-ru="Поддержка при переезде и поиске идентичности в новой стране." data-nl="Steun bij emigratie en het vinden van uw identiteit in een nieuw land.">Поддержка при переезде и поиске идентичности в новой стране.</p>
+            <h3 class="tr" data-ru="Психология миграции" data-nl="Migratiepsychologie">Migratiepsychologie</h3>
+            <p class="tr" data-ru="Поддержка при переезде и поиске идентичности в новой стране." data-nl="Steun bij emigratie en het vinden van uw identiteit in een nieuw land.">Steun bij emigratie en het vinden van uw identiteit in een nieuw land.</p>
         </div>
         <div class="card">
-            <h3 class="tr" data-ru="Языковой барьер" data-nl="Taalbarrière">Языковой барьер</h3>
-            <p class="tr" data-ru="Преодоление страха общения на иностранном языке." data-nl="Het overwinnen van angst om in een vreemde taal te communiceren.">Преодоление страха общения на иностранном языке.</p>
+            <h3 class="tr" data-ru="Языковой барьер" data-nl="Taalbarrière">Taalbarrière</h3>
+            <p class="tr" data-ru="Преодоление страха общения на иностранном языке." data-nl="Het overwinnen van angst om in een vreemde taal te communiceren.">Het overwinnen van angst om in een vreemde taal te communiceren.</p>
         </div>
     </div>
 </section>
 
 <section id="pricing">
-    <h2 class="tr" data-ru="Стоимость" data-nl="Tarieven">Стоимость</h2>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <h2 class="tr" data-ru="Стоимость" data-nl="Tarieven">Tarieven</h2>
+    <div class="grid">
         <div class="price-card">
-            <h3 class="tr" data-ru="Сессия 50 мин" data-nl="Sessie 50 min">Сессия 50 мин</h3>
-            <div class="price-value">€60 / 5000₽</div>
+            <h3 class="tr" data-ru="Разовая сессия" data-nl="Losse sessie">Losse sessie</h3>
+            <div class="price-value">€75 / 7500₽</div>
+            <p class="tr" data-ru="Сессия 60 мин" data-nl="Sessie van 60 min">Sessie van 60 min</p>
+        </div>
+        <div class="price-card" style="border-color: var(--primary-color);">
+            <h3 class="tr" data-ru="Пакет (5 сессий)" data-nl="Pakket (5 sessies)">Pakket (5 sessies)</h3>
+            <div class="price-value">€335 / 33500₽</div>
+            <p class="tr" data-ru="Курс из 5 встреч по 60 мин" data-nl="Traject van 5 sessies van 60 min">Traject van 5 sessies van 60 min</p>
         </div>
         <div class="price-card">
-            <h3 class="tr" data-ru="Пакет 5 встреч" data-nl="Pakket 5 sessies">Пакет 5 встреч</h3>
-            <div class="price-value">€270 / 22500₽</div>
+            <h3 class="tr" data-ru="Адаптация & Коучинг" data-nl="Adaptatie & Coaching">Adaptatie & Coaching</h3>
+            <div class="price-value">€95 / 9500₽</div>
+            <p class="tr" data-ru="Специализированная сессия 60 мин" data-nl="Gespecialiseerde sessie 60 min">Gespecialiseerde sessie 60 min</p>
         </div>
     </div>
 </section>
 
 <div class="blog-box" id="blog">
     <section style="padding:0;">
-        <h2 class="tr" data-ru="Блог" data-nl="Blog">Блог</h2>
+        <h2 class="tr" data-ru="Блог" data-nl="Blog">Blog</h2>
         <div class="grid">
             <div class="article">
-                <h3 class="tr" data-ru="Что происходит на первой встрече?" data-nl="De eerste sessie: wat gebeurt er?">Что происходит на первой встрече?</h3>
+                <h3 class="tr" data-ru="Что происходит на первой встрече?" data-nl="De eerste sessie: wat gebeurt er?">De eerste sessie: wat gebeurt er?</h3>
                 <p class="tr" 
-                   data-ru="Первая сессия — это знакомство. Мы обсудим ваш запрос в безопасной атмосфере, без оценок и советов. Просто будьте собой." 
-                   data-nl="De eerste sessie is een kennismaking. We bespreken uw hulpvraag in een veilige sfeer, zonder oordeel. Wees gewoon uzelf.">
-                   Первая сессия — это знакомство. Мы обсудим ваш запрос в безопасной атмосфере, без оценок и советов. Просто будьте собой.
+                   data-ru="Первая сессия — это знакомство. Мы обсудим ваш запрос в безопасной атмосфере, без оценок и советов." 
+                   data-nl="De eerste sessie is een kennismaking. We bespreken uw hulpvraag in een veilige sfeer, zonder oordeel.">
+                   De eerste sessie is een kennismaking. We bespreken uw hulpvraag in een veilige sfeer, zonder oordeel.
                 </p>
             </div>
             <div class="article">
-                <h3 class="tr" data-ru="Миграция: создание альтернативного гнезда" data-nl="Migratie: een alternatief nest">Миграция: создание альтернативного гнезда</h3>
+                <h3 class="tr" data-ru="Миграция: создание альтернативного гнезда" data-nl="Migratie: een alternatief nest">Migratie: een alternatief nest</h3>
                 <p class="tr" 
-                   data-ru="Переезд — это всегда потеря опор. Важно создать новое 'гнездо' внутри себя через смыслы и принятие новой идентичности." 
-                   data-nl="Verhuizen betekent verlies van steunpunten. Het is belangrijk om een nieuw 'nest' in uzelf te creëren door nieuwe betekenissen.">
-                   Переезд — это всегда потеря опор. Важно создать новое 'гнездо' внутри себя через смыслы и принятие новой идентичности.
+                   data-ru="Переезд — это всегда потеря опор. Важно создать новое 'гнездо' внутри себя через новые смыслы." 
+                   data-nl="Verhuizen betekent verlies van steunpunten. Het is belangrijk om een nieuw 'nest' in uzelf te creëren.">
+                   Verhuizen betekent verlies van steunpunten. Het is belangrijk om een nieuw 'nest' in uzelf te creëren.
                 </p>
             </div>
         </div>
@@ -169,8 +158,7 @@
 </div>
 
 <section class="contact-section" id="contact">
-    <h2 class="tr" data-ru="Начать работу" data-nl="Contact opnemen">Начать работу</h2>
-    <p class="tr" data-ru="Выберите удобный способ связи для записи на консультацию:" data-nl="Kies een handige manier om een afspraak te maken:">Выберите удобный способ связи для записи на консультацию:</p>
+    <h2 class="tr" data-ru="Начать работу" data-nl="Contact opnemen">Contact opnemen</h2>
     <div style="margin-top: 30px;">
         <a href="https://wa.me/79223624213" class="social-btn" style="background: #25D366;" target="_blank">WhatsApp</a>
         <a href="https://t.me/mari_mis" class="social-btn" style="background: #0088cc;" target="_blank">Telegram</a>
@@ -180,15 +168,19 @@
 <footer>
     <p class="tr" 
        data-ru="© 2026 Мария Ален | Психолог и Лингвист" 
-       data-nl="© 2026 Maria Alen | Psycholoog & Linguïst">
-       © 2026 Мария Ален | Психолог и Лингвист
+       data-nl="© 2026 Mariia Alen | Psycholoog & Linguïst">
+       © 2026 Mariia Alen | Psycholoog & Linguïst
     </p>
 </footer>
 
 <script>
     function setLang(lang, event) {
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-        if(event) event.target.classList.add('active');
+        if(event && event.target) {
+            event.target.classList.add('active');
+        } else {
+            document.querySelector('.lang-btn[onclick*="' + lang + '"]').classList.add('active');
+        }
         
         document.querySelectorAll('.tr').forEach(el => {
             const translation = el.getAttribute('data-' + lang);
@@ -196,6 +188,10 @@
         });
         document.documentElement.lang = lang;
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setLang('nl'); 
+    });
 </script>
 
 </body>
