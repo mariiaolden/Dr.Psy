@@ -108,10 +108,30 @@
     <h2 class="tr" data-ru="Блог" data-nl="Blog">Блог</h2>
     <div class="article">
         <h3 class="tr" data-ru="Первый шаг: что происходит на первой встрече?" data-nl="De eerste stap: wat gebeurt er tijdens de eerste sessie?">Первый шаг: что происходит на первой встрече?</h3>
+        
+        <div class="tr" data-ru="Многие откладывают визит к психологу из-за страха неизвестности. Давайте разберем, как всё устроено:" data-nl="Veel mensen stellen een bezoek aan een psycholoog uit uit angst voor het onbekende. Laten we kijken hoe het werkt:">
+            Многие откладывают визит к психологу из-за страха неизвестности. Давайте разберем, как всё устроено:
+        </div>
+
+        <ul style="margin-top: 20px;">
+            <li>
+                <strong class="tr" data-ru="Знакомство:" data-nl="Kennismaking:">Знакомство:</strong> 
+                <span class="tr" data-ru="Мы просто общаемся, чтобы понять, подходит ли вам мой метод работы." data-nl="We praten gewoon om te kijken of mijn werkwijze bij u past.">Мы просто общаемся, чтобы понять, подходит ли вам мой метод работы.</span>
+            </li>
+            <li>
+                <strong class="tr" data-ru="Безопасность:" data-nl="Veiligheid:">Безопасность:</strong> 
+                <span class="tr" data-ru="Всё, что вы скажете, строго конфиденциально. Это защищенное пространство." data-nl="Alles wat u zegt is strikt vertrouwelijk. Dit is een veilige ruimte.">Всё, что вы скажете, строго конфиденциально. Это защищенное пространство.</span>
+            </li>
+            <li>
+                <strong class="tr" data-ru="Без оценок:" data-nl="Geen oordeel:">Без оценок:</strong> 
+                <span class="tr" data-ru="Я не судья, я — ваш проводник. Вы можете быть собой без страха осуждения." data-nl="Ik ben geen rechter, ik ben uw gids. U kunt uzelf zijn zonder angst voor veroordeling.">Я не судья, я — ваш проводник. Вы можете быть собой без страха осуждения.</span>
+            </li>
+        </ul>
+
         <p class="tr" 
-           data-ru="Первая сессия — это диагностика вашего состояния и формулирование целей. Мы познакомимся, обсудим ваш запрос и наметим план работы в безопасной атмосфере." 
-           data-nl="De eerste sessie is een intakegesprek om uw situatie te begrijpen en doelen te formuleren. In een veilige sfeer maken we kennis en bespreken we uw hulpvraag.">
-           Первая сессия — это диагностика вашего состояния и формулирование целей. Мы познакомимся, обсудим ваш запрос и наметим план работы в безопасной атмосфере.
+           data-ru="Первая сессия — это диагностика вашего состояния и формулирование целей. Вам не нужно специально «готовиться», просто будьте собой. Терапия — это путь к жизни, где вам больше не нужно нести всё в одиночку." 
+           data-nl="De eerste sessie is een intake om uw situatie te begrijpen en doelen te formuleren. U hoeft zich niet speciaal voor te bereiden, wees gewoon uzelf. Therapie is de weg naar een leven waarin u niet alles meer alleen hoeft te dragen.">
+           Первая сессия — это диагностика вашего состояния и формулирование целей. Вам не нужно специально «готовиться», просто будьте собой. Терапия — это путь к жизни, где вам больше не нужно нести всё в одиночку.
         </p>
     </div>
 </section>
@@ -126,12 +146,21 @@
 
 <script>
     function setLang(lang, event) {
+        // Управляем активным состоянием кнопок
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-        if(event) event.target.classList.add('active');
+        if(event) {
+            event.target.classList.add('active');
+        } else {
+            // Если вызвано при загрузке
+            document.querySelector(`.lang-btn[onclick*="${lang}"]`).classList.add('active');
+        }
 
+        // Перевод всех элементов с классом .tr
         document.querySelectorAll('.tr').forEach(el => {
-            const text = el.getAttribute('data-' + lang);
-            if(text) el.innerText = text;
+            const translation = el.getAttribute('data-' + lang);
+            if (translation) {
+                el.innerHTML = translation; // Используем innerHTML для поддержки тегов внутри
+            }
         });
         document.documentElement.lang = lang;
     }
