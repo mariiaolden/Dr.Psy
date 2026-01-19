@@ -62,9 +62,9 @@
     <div class="hero-text">
         <h1 class="tr" data-ru="Бережная помощь и научный подход" data-nl="Zorgvuldige hulp en wetenschappelijke benadering">Zorgvuldige hulp en wetenschappelijke benadering</h1>
         <p class="tr" 
-           data-ru="Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии и лингвистике." 
-           data-nl="Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.">
-           Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie en taalkunde.
+           data-ru="Меня зовут Мария Ален. Я помогаю найти устойчивость и баланс, опираясь на глубокие знания в психологии." 
+           data-nl="Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie.">
+           Mijn naam is Mariia Alen. Ik help u veerkracht en balans te vinden, puttend uit diepgaande kennis in psychologie.
         </p>
         <a href="#contact" class="tr" data-ru="Записаться" data-nl="Afspraak maken" style="display:inline-block; padding: 15px 40px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 20px;">Afspraak maken</a>
     </div>
@@ -79,16 +79,16 @@
         <div>
             <h3 class="tr" data-ru="Дипломы" data-nl="Diploma's">Diploma's</h3>
             <ul>
-                <li><strong>2008 — PSPU:</strong> <span class="tr" data-ru="Психолог, преподаватель психологии" data-nl="Psycholoog, docent psychologie">Psycholoog, docent psychologie</span></li>
-                <li><strong>2011 — PSTU:</strong> <span class="tr" data-ru="Лингвист-переводчик" data-nl="Linguïst-vertaler">Linguïst-vertaler</span></li>
-                <li><strong>2023 — PSU:</strong> <span class="tr" data-ru="Магистр филологии" data-nl="Master in de Filologie">Master in de Filologie</span></li>
+                <li><strong>2002-2008 — PSPU:</strong> <span class="tr" data-ru="Психолог, преподаватель психологии" data-nl="Psycholoog, docent psychologie">Psycholoog, docent psychologie</span></li>
+                <li><strong>2009-2011 — PSTU:</strong> <span class="tr" data-ru="Лингвист-переводчик" data-nl="Linguïst-vertaler">Linguïst-vertaler</span></li>
+                <li><strong>2020-2023 — PSU:</strong> <span class="tr" data-ru="Магистр филологии" data-nl="Master in de Filologie">Master in de Filologie</span></li>
             </ul>
         </div>
         <div>
             <h3 class="tr" data-ru="Научные победы" data-nl="Awards">Awards</h3>
             <ul>
-                <li class="tr" data-ru="2021 — 1 место. 'Образ врага в масс-медиа Бельгии'" data-nl="2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'">2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'</li>
-                <li class="tr" data-ru="2022 — 3 место. 'Миграция: создание альтернативного гнезда'" data-nl="2022 — 3de plaats. 'Migratie: het creëren van een alternatief nest'">2022 — 3de plaats. 'Migratie: het creëren van een alternatief nest'</li>
+                <li class="tr" data-ru="В 2021 — 1 место. 'Образ врага в масс-медиа Бельгии'" data-nl="In 2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'">In 2021 — 1ste plaats. 'Het vijandbeeld in de Belgische massamedia'</li>
+                <li class="tr" data-ru="В 2022 — 3 место. 'Миграция- мультилингвизм или создание альтернативного гнезда'" data-nl="In 2022 — 3de plaats. 'Migratie- meertaligheid of het creëren van een alternatief nest'">In 2022 — 3de plaats. 'Migratie- meertaligheid of het creëren van een alternatief nest'</li>
             </ul>
         </div>
     </div>
@@ -181,19 +181,65 @@
 
 </div>
 
-<section class="contact-section" id="contact">
-    <h2 class="tr" data-ru="Начать работу" data-nl="Contact opnemen">Contact opnemen</h2>
-    <div style="margin-top: 30px;">
-        <a href="https://wa.me/79223624213" class="social-btn" style="background: #25D366;" target="_blank">WhatsApp</a>
-        <a href="https://t.me/mari_mis" class="social-btn" style="background: #0088cc;" target="_blank">Telegram</a>
-    </div>
-</section>
+<div id="form-container">
+    <form id="my-form" action="https://formspree.io/f/2918186704701488212" method="POST" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+        <div style="margin-bottom: 15px;">
+            <label class="tr" data-ru="Ваше имя" data-nl="Uw naam" style="display:block; margin-bottom:5px; font-weight:600;">Uw naam</label>
+            <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="tr" data-ru="Ваш Email или Телефон" data-nl="Uw E-mail of Telefoon" style="display:block; margin-bottom:5px; font-weight:600;">Uw E-mail of Telefoon</label>
+            <input type="text" name="contact" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label class="tr" data-ru="Сообщение" data-nl="Uw bericht" style="display:block; margin-bottom:5px; font-weight:600;">Uw bericht</label>
+            <textarea name="message" rows="4" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;"></textarea>
+        </div>
+        <button id="submit-button" type="submit" class="submit-btn tr" data-ru="Отправить заявку" data-nl="Verstuur aanvraag" style="width:100%; border:none; cursor:pointer; background: var(--primary-color); color: white; padding: 15px; border-radius: 5px; font-weight: 600;">Verstuur aanvraag</button>
+        <p id="status" style="margin-top: 15px; text-align: center; font-weight: 600;"></p>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      const status = document.getElementById("status");
+      const data = new FormData(event.target);
+      const currentLang = document.documentElement.lang || 'nl';
+
+      const messages = {
+          ru: { success: "Спасибо! Ваша заявка отправлена.", error: "Ой! Произошла ошибка. Проверьте ID или Email." },
+          nl: { success: "Bedankt! Uw aanvraag is verzonden.", error: "Oeps! Er is een fout opgetreden. Controleer ID of Email." }
+      };
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = messages[currentLang].success;
+          status.style.color = "green";
+          form.reset();
+        } else {
+          status.innerHTML = messages[currentLang].error;
+          status.style.color = "red";
+        }
+      }).catch(error => {
+        status.innerHTML = messages[currentLang].error;
+        status.style.color = "red";
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 <footer>
     <p class="tr" 
-       data-ru="© 2026 Мария Ален | Психолог и Лингвист" 
-       data-nl="© 2026 Mariia Alen | Psycholoog & Linguïst">
-       © 2026 Mariia Alen | Psycholoog & Linguïst
+       data-ru="© 2025 Мария Ален | Психолог" 
+       data-nl="© 2025 Mariia Alen | Therapeut">
+       © 2025 Mariia Alen | Therapeut
     </p>
 </footer>
 
